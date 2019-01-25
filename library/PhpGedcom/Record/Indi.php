@@ -220,24 +220,24 @@ class Indi extends Record implements Noteable, Objectable, Sourceable
         return $this;
     }
 
-  /**
-   * @return Indi\Attr[]
-   */
-  public function getAllAttr()
-  {
-    return $this->attr;
-  }
+    /**
+     * @return Indi\Attr[]
+     */
+    public function getAllAttr()
+    {
+        return $this->attr;
+    }
 
-  /**
-   * @return Indi\Attr[]
-   */
-  public function getAttr($key = '')
-  {
-    if(isset($this->attr[strtoupper($key)]))
-    return $this->attr[strtoupper($key)];
-  }
+    /**
+     * @return Indi\Attr[]
+     */
+    public function getAttr($key = '')
+    {
+        if(isset($this->attr[strtoupper($key)]))
+        return $this->attr[strtoupper($key)];
+    }
 
-  /**
+    /**
      * @param Indi\Even $even
      * @return Indi
      */
@@ -247,24 +247,24 @@ class Indi extends Record implements Noteable, Objectable, Sourceable
         return $this;
     }
 
-  /**
-   * @return array
-   */
-  public function getAllEven()
-  {
-    return $this->even;
-  }
+    /**
+     * @return array
+     */
+    public function getAllEven()
+    {
+        return $this->even;
+    }
 
-  /**
-   * @return array
-   */
-  public function getEven($key = '')
-  {
-    if(isset($this->even[strtoupper($key)]))
-    return $this->even[strtoupper($key)];
-  }
+    /**
+     * @return array
+     */
+    public function getEven($key = '')
+    {
+        if(isset($this->even[strtoupper($key)]))
+        return $this->even[strtoupper($key)];
+    }
 
-  /**
+    /**
      * @param Indi\Asso $asso
      * @return Indi
      */
@@ -301,7 +301,7 @@ class Indi extends Record implements Noteable, Objectable, Sourceable
     }
 
     /**
-     * @param NoteRef $note
+     * @param \PhpGedcom\Record\NoteRef $note
      * @return Indi
      */
     public function addNote($note = [])

@@ -68,6 +68,11 @@ class Subm extends Record implements Objectable
     protected $obje = array();
 
     /**
+     * @var array
+     */
+    protected $note = array();
+
+    /**
      * @param string $subm
      * @return Subm
      */
@@ -236,6 +241,24 @@ class Subm extends Record implements Objectable
     public function addObje($obje = [])
     {
         $this->obje[] = $obje;
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getNote()
+    {
+        return $this->note;
+    }
+
+    /**
+     * @param Record\Note $note
+     * @return Subm
+     */
+    public function addNote($note = [])
+    {
+        $this->note[] = $note;
         return $this;
     }
 }

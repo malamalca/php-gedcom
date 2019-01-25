@@ -65,7 +65,7 @@ class Indi extends \PhpGedcom\Parser\Component
                     $indi->addAlia($parser->normalizeIdentifier($record[2]));
                     break;
                 case 'SEX':
-                    $indi->setSex(trim($record[2]));
+                    $indi->setSex(isset($record[2]) ? trim($record[2]) : '');
                     break;
                 case 'RIN':
                     $indi->setRin(trim($record[2]));

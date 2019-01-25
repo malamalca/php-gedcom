@@ -52,7 +52,7 @@ class Parser
     /**
      *
      */
-    protected $_linePices      = 0;
+    protected $_linePieces      = 0;
 
     /**
      *

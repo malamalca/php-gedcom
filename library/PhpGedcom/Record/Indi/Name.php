@@ -16,6 +16,13 @@ namespace PhpGedcom\Record\Indi;
 
 /**
  *
+ * @method string getName()
+ * @method string getNpfx()
+ * @method string getGivn()
+ * @method string getNick()
+ * @method string getSpfx()
+ * @method string getSurn()
+ * @method string getNsfx()
  */
 class Name extends \PhpGedcom\Record implements \PhpGedcom\Record\Sourceable
 {

@@ -20,6 +20,11 @@ use \PhpGedcom\Record\Noteable;
 
 /**
  *
+ * Evemt record.
+ *
+ * @method mixed getType()
+ * @method \PhpGedcom\Record\Date getDate()
+ * @method string getPlac()
  */
 class Even extends \PhpGedcom\Record implements Objectable, Sourceable, Noteable
 {

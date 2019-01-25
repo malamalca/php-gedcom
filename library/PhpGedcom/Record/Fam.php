@@ -98,24 +98,24 @@ class Fam extends \PhpGedcom\Record implements Noteable, Sourceable, Objectable
         $this->_even[$even->getType()] = $even;
     }
 
-  /**
-   * @return array
-   */
-  public function getAllEven()
-  {
-    return $this->_even;
-  }
+    /**
+     * @return array
+     */
+    public function getAllEven()
+    {
+        return $this->_even;
+    }
 
-  /**
-   * @return array
-   */
-  public function getEven($key = '')
-  {
-    if(isset($this->_even[strtoupper($key)]))
-    return $this->_even[strtoupper($key)];
-  }
+    /**
+     * @return void|\PhpGedcom\Record\Fam\Even
+     */
+    public function getEven($key = '')
+    {
+        if(isset($this->_even[strtoupper($key)]))
+        return $this->_even[strtoupper($key)];
+    }
 
-  /**
+    /**
      *
      */
     public function addSlgs($slgs = [])

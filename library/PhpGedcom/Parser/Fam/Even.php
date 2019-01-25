@@ -53,7 +53,9 @@ class Even extends \PhpGedcom\Parser\Component
                     $even->setType(trim($record[2]));
                     break;
                 case 'DATE':
-                    $even->setDate(trim($record[2]));
+                    $dat = \PhpGedcom\Parser\Date::parse($parser);
+                    $even->setDate($dat);
+                    //$even->setDate(trim($record[2]));
                     break;
                 case 'PLAC':
                     $plac = \PhpGedcom\Parser\Indi\Even\Plac::parse($parser);

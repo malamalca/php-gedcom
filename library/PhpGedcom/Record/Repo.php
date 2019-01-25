@@ -63,11 +63,14 @@ class Repo extends Record implements Noteable
     protected $note = array();
 
     /**
-     * @param Phon $phon
+     * @param null|\PhpGedcom\Record\Phon $phon
      * @return Repo
      */
-    public function addPhon($phon = new Phon)
+    public function addPhon($phon = null)
     {
+        if (empty($phon)) {
+            $phon = new \PhpGedcom\Record\Phon();
+        }
         $this->phon[] = $phon;
         return $this;
     }
@@ -81,11 +84,14 @@ class Repo extends Record implements Noteable
     }
 
     /**
-     * @param Refn $refn
+     * @param null|\PhpGedcom\Record\Refn $refn
      * @return Repo
      */
-    public function addRefn($refn = new Refn)
+    public function addRefn($refn = null)
     {
+        if (empty($refn)) {
+            $refn = new \PhpGedcom\Record\Refn();
+        }
         $this->refn[] = $refn;
         return $this;
     }
@@ -99,11 +105,14 @@ class Repo extends Record implements Noteable
     }
 
     /**
-     * @param NoteRef $note
+     * @param null|\PhpGedcom\Record\NoteRef $note
      * @return Repo
      */
-    public function addNote($note =  new NoteRef)
+    public function addNote($note = null)
     {
+        if (empty($node)) {
+            $note = new \PhpGedcom\Record\NoteRef();
+        }
         $this->note[] = $note;
         return $this;
     }
@@ -153,11 +162,14 @@ class Repo extends Record implements Noteable
     }
 
     /**
-     * @param \PhpGedcom\Record\Addr $addr
+     * @param null|\PhpGedcom\Record\Addr $addr
      * @return Repo
      */
-    public function setAddr($addr = new Addr)
+    public function setAddr($addr = null)
     {
+        if (empty($addr)) {
+            $addr = new \PhpGedcom\Record\Addr();
+        }
         $this->addr = $addr;
         return $this;
     }
